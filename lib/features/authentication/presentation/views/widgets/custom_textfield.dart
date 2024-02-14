@@ -23,6 +23,9 @@ class CustomTextField extends StatelessWidget {
       height: 60,
       width: MediaQuery.of(context).size.width * 0.68,
       child: TextFormField(
+        style: const TextStyle(
+          color: kBackgroundSplashColor,
+        ),
         validator: (value) {
           if (value == null || value.isEmpty) {
             return 'هذا الحقل مطلوب';

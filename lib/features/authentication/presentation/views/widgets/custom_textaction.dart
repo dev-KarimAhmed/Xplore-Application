@@ -4,31 +4,34 @@ import 'package:xplore/features/authentication/presentation/views/widgets/custom
 
 class CustomAction extends StatelessWidget {
   const CustomAction(
-      {super.key, required this.textBtn, required this.textNormal, this.onTap});
+      {super.key, required this.textBtn, required this.textNormal, this.onTap,  this.mainAxisAlignment = MainAxisAlignment.end});
   final String textBtn;
   final String textNormal;
   final void Function()? onTap;
+  final MainAxisAlignment mainAxisAlignment;
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.end,
-      children: [
-        CustomTextButton(
-          onTap: onTap,
-          text: textBtn,
-        ),
-        const SizedBox(
-          width: 2,
-        ),
-        Text(
-          textNormal,
-          style: Styles.hintTextStyle
-              .copyWith(fontSize: 16, fontWeight: FontWeight.w700),
-          textDirection: TextDirection.rtl,
-        ),
-      ],
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 8),
+      child: Row(
+        mainAxisAlignment: mainAxisAlignment,
+        children: [
+          CustomTextButton(
+            onTap: onTap,
+            text: textBtn,
+          ),
+          const SizedBox(
+            width: 2,
+          ),
+          Text(
+            textNormal,
+            style: Styles.hintTextStyle
+                .copyWith(fontSize: 16, fontWeight: FontWeight.w700),
+            textDirection: TextDirection.rtl,
+          ),
+        ],
+      ),
     );
   }
 }
-

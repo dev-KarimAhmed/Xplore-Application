@@ -1,15 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:xplore/constants.dart';
-import 'package:xplore/core/utils/functions/navigation_functions.dart';
-import 'package:xplore/features/authentication/presentation/views/register_view.dart';
 import 'package:xplore/features/authentication/presentation/views/widgets/custom_button.dart';
 import 'package:xplore/features/authentication/presentation/views/widgets/custom_textaction.dart';
-import 'package:xplore/features/authentication/presentation/views/widgets/custom_textbtn.dart';
 import 'package:xplore/features/authentication/presentation/views/widgets/custom_textfield.dart';
 import 'package:xplore/features/authentication/presentation/views/widgets/with_google_btn.dart';
 
-class LoginViewForm extends StatelessWidget {
-  const LoginViewForm({super.key});
+class RegisterViewForm extends StatelessWidget {
+  const RegisterViewForm({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,6 +15,14 @@ class LoginViewForm extends StatelessWidget {
       children: [
         const SizedBox(
           height: 20,
+        ),
+        const CustomTextField(
+          keyboardType: TextInputType.name,
+          hintText: "الاسم",
+          icon: Icons.person,
+        ),
+        const SizedBox(
+          height: 16,
         ),
         const CustomTextField(
           keyboardType: TextInputType.emailAddress,
@@ -45,35 +50,29 @@ class LoginViewForm extends StatelessWidget {
         ),
         CustomButton(
           onPressed: () {},
-          text: 'دخول',
+          text: 'تسجيل',
         ),
         const SizedBox(
           height: 8,
         ),
         WithGoogleBtn(
           onTap: () {},
-          data: 'تسجيل دخول باستخدام جوجل',
+          data: 'تسجيل حساب باستخدام جوجل',
         ),
         const SizedBox(
           height: 16,
-        ),
-        CustomAction(
-          textNormal: ' إذا كانت أول مرة لك في استخدام التطبيق',
-          textBtn: 'إنشاء حساب ',
-          onTap: () {
-            navigateTo(context, const RegisterView());
-          },
-        ),
-        const SizedBox(
-          height: 8,
         ),
         const CustomDivider(),
         const SizedBox(
           height: 8,
         ),
-        CustomTextButton(
-          onTap: () {},
-          text: 'هل نسيت كلمة المرور؟',
+        CustomAction(
+          mainAxisAlignment: MainAxisAlignment.center,
+          textNormal: 'هل لديك حساب؟',
+          textBtn: 'تسجيل الدخول',
+          onTap: () {
+            Navigator.pop(context);
+          },
         ),
       ],
     );
