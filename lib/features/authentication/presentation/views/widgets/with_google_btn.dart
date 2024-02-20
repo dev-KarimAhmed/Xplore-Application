@@ -18,7 +18,7 @@ class WithGoogleBtn extends StatelessWidget {
     return GestureDetector(
       onTap: onTap,
       child: Container(
-        width: MediaQuery.of(context).size.width * 0.5,
+        width: MediaQuery.of(context).size.width * 0.6,
         height: 40,
         decoration: BoxDecoration(
           color: kPrimaryColor,
@@ -39,7 +39,7 @@ class WithGoogleBtn extends StatelessWidget {
             Text(
               data,
               style: Styles.textStyle16
-                  .copyWith(fontWeight: FontWeight.w200, fontSize: 13),
+                  .copyWith(fontWeight: FontWeight.w200, fontSize: 12),
             )
           ],
         ),

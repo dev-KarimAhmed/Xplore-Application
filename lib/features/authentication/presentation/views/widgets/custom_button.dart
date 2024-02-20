@@ -5,14 +5,17 @@ import 'package:xplore/core/utils/stlyes.dart';
 class CustomButton extends StatelessWidget {
   const CustomButton({
     super.key,
-    required this.onPressed, required this.text,
+    required this.onPressed,
+    required this.text,
+    this.width,
   });
   final void Function()? onPressed;
   final String text;
+  final double? width;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: MediaQuery.of(context).size.width * 0.50,
+      width: width ?? MediaQuery.of(context).size.width * 0.50,
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(
           backgroundColor: kPrimaryColor,
@@ -22,7 +25,7 @@ class CustomButton extends StatelessWidget {
             ),
           ),
         ),
-        onPressed: () {},
+        onPressed: onPressed,
         child: Text(
           text,
           style: Styles.textStyle16.copyWith(fontWeight: FontWeight.w600),

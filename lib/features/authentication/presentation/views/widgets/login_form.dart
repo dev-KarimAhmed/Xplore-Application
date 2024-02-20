@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:xplore/constants.dart';
 import 'package:xplore/core/utils/functions/navigation_functions.dart';
+import 'package:xplore/features/authentication/presentation/views/forgot_password_view.dart';
 import 'package:xplore/features/authentication/presentation/views/register_view.dart';
 import 'package:xplore/features/authentication/presentation/views/widgets/custom_button.dart';
 import 'package:xplore/features/authentication/presentation/views/widgets/custom_textaction.dart';
 import 'package:xplore/features/authentication/presentation/views/widgets/custom_textbtn.dart';
 import 'package:xplore/features/authentication/presentation/views/widgets/custom_textfield.dart';
 import 'package:xplore/features/authentication/presentation/views/widgets/with_google_btn.dart';
+import 'package:xplore/features/home/presentation/views/home_view.dart';
 
 class LoginViewForm extends StatelessWidget {
   const LoginViewForm({super.key});
@@ -44,7 +46,11 @@ class LoginViewForm extends StatelessWidget {
           height: 16,
         ),
         CustomButton(
-          onPressed: () {},
+          onPressed: () {
+            navigateTo(context, const HomeView());
+            // Navigator.pushReplacement(
+            //     context, MaterialPageRoute(builder: (context) => HomeView()));
+          },
           text: 'دخول',
         ),
         const SizedBox(
@@ -72,7 +78,9 @@ class LoginViewForm extends StatelessWidget {
           height: 8,
         ),
         CustomTextButton(
-          onTap: () {},
+          onTap: () {
+            navigateTo(context, ForgotPasswordView());
+          },
           text: 'هل نسيت كلمة المرور؟',
         ),
       ],
