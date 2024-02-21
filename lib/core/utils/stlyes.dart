@@ -19,6 +19,15 @@ abstract class Styles {
   static TextStyle textStyle16 = const TextStyle(
     color: Colors.white,
     fontSize: 16,
+  );
+  static TextStyle textGoldStyle = const TextStyle(
+    color: kGoldColor,
+    fontSize: 23,
+    fontWeight: FontWeight.bold,
+  );
+  static TextStyle textUserName = const TextStyle(
+    color: kuserName,
+    fontSize: 15,
     
   );
 }

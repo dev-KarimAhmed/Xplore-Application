@@ -6,3 +6,5 @@ const Color kPrimaryColor = Color(0xFF20428F);
 const Color kBackgroundSplashColor = Color(0xFF16254E);
 const Color kBackgroundColor = Color(0xFFF0F8F5);
 const Color kHintTextColor = Color(0xFFC3C3C3);
+const Color kGoldColor = Color(0xFFF4D35E);
+const Color kuserName = Color(0xffF0F8F5);
