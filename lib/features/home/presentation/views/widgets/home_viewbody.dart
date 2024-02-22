@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:xplore/constants.dart';
 import 'package:xplore/core/utils/components/user_info.dart';
-import 'package:xplore/features/home/presentation/views/widgets/app_use_guide_section.dart';
+import 'package:xplore/core/utils/components/app_use_guide_section.dart';
 import 'package:xplore/features/home/presentation/views/widgets/categories_section.dart';
 
 class HomeViewBody extends StatelessWidget {
@@ -12,14 +12,15 @@ class HomeViewBody extends StatelessWidget {
     return Container(
       height: MediaQuery.of(context).size.height,
       decoration: BoxDecoration(
-          gradient: LinearGradient(
-        colors: [
-          kBackgroundSplashColor,
-          Color(0xff1F3E87),
-        ],
-        end: Alignment.topRight,
-        begin: Alignment.bottomLeft,
-      )),
+        gradient: LinearGradient(
+          colors: [
+            kBackgroundSplashColor,
+            Color(0xff1F3E87),
+          ],
+          end: Alignment.topRight,
+          begin: Alignment.bottomLeft,
+        ),
+      ),
       child: SingleChildScrollView(
         physics: const BouncingScrollPhysics(),
         child: SizedBox(

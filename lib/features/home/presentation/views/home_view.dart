@@ -3,9 +3,9 @@ import 'package:xplore/core/utils/components/drawer_header.dart';
 import 'package:xplore/core/utils/components/drawer_tile.dart';
 import 'package:xplore/core/utils/functions/build_custom_drawer_appbar.dart';
 import 'package:xplore/core/utils/functions/build_custom_linear.dart';
-import 'package:xplore/core/utils/functions/navigation_functions.dart';
 import 'package:xplore/features/home/presentation/views/widgets/home_viewbody.dart';
 import 'package:xplore/features/settings/presentation/views/settings_view.dart';
+import 'package:xplore/features/who_are_us/presentation/views/who_are_us.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -46,12 +46,25 @@ class HomeView extends StatelessWidget {
                         title: 'الاعدادات',
                         onTap: () {
                           Navigator.pop(context);
-                          navigateTo(context, SettingsView());
+                          Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SettingsView()));
                         }),
                     CustomListTile(icon: Icons.share, title: 'مشاركة التطبيق'),
                     CustomListTile(
                         icon: Icons.thumb_up_alt, title: 'تقييم التطبيق'),
-                    CustomListTile(icon: Icons.info, title: 'من نحن'),
+                    CustomListTile(
+                      icon: Icons.info,
+                      title: 'من نحن',
+                      onTap: () {
+                        Navigator.pop(context);
+                        Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => WhoAreUS()));
+                      },
+                    ),
                     CustomListTile(
                         icon: Icons.phone_in_talk, title: 'تواصل معنا'),
                     CustomListTile(icon: Icons.logout, title: 'تسجيل الخروج'),

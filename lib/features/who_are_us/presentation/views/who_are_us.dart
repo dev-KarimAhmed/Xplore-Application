@@ -4,16 +4,17 @@ import 'package:xplore/core/utils/components/drawer_tile.dart';
 import 'package:xplore/core/utils/functions/build_custom_drawer_appbar.dart';
 import 'package:xplore/core/utils/functions/build_custom_linear.dart';
 import 'package:xplore/features/home/presentation/views/home_view.dart';
-import 'package:xplore/features/settings/presentation/views/widgets/settings_view_body.dart';
+import 'package:xplore/features/settings/presentation/views/settings_view.dart';
+import 'package:xplore/features/who_are_us/presentation/views/widgets/who_are_us.dart';
 
-class SettingsView extends StatelessWidget {
-  const SettingsView({super.key});
+class WhoAreUS extends StatelessWidget {
+  const WhoAreUS({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: customDrawerAppBar(title: 'الاعدادات'),
-      body: SettingsViewBody(),
+      appBar: customDrawerAppBar(title: 'من نحن'),
+      body: WhoAreUSBody(),
       endDrawer: Drawer(
         width: MediaQuery.of(context).size.width * .65,
         child: SingleChildScrollView(
@@ -47,14 +48,25 @@ class SettingsView extends StatelessWidget {
                       },
                     ),
                     CustomListTile(
-                      icon: Icons.settings,
-                      title: 'الاعدادات',
-                      isSameView: true,
-                    ),
+                        icon: Icons.settings,
+                        title: 'الاعدادات',
+                        onTap: () {
+                          Navigator.pop(context);
+                          Navigator.pushReplacement(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => SettingsView()));
+                        }),
                     CustomListTile(icon: Icons.share, title: 'مشاركة التطبيق'),
                     CustomListTile(
                         icon: Icons.thumb_up_alt, title: 'تقييم التطبيق'),
-                    CustomListTile(icon: Icons.info, title: 'من نحن'),
+                    CustomListTile(
+                      icon: Icons.info,
+                      title: 'من نحن',
+                      onTap: () {
+                        Navigator.pop(context);
+                      },
+                    ),
                     CustomListTile(
                         icon: Icons.phone_in_talk, title: 'تواصل معنا'),
                     CustomListTile(icon: Icons.logout, title: 'تسجيل الخروج'),
