@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:xplore/constants.dart';
 import 'package:xplore/features/authentication/presentation/views/widgets/login_view_body.dart';
 
 class LoginView extends StatelessWidget {
@@ -8,9 +7,10 @@ class LoginView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      backgroundColor: kBackgroundColor,
+      backgroundColor: Colors.white,
       body: SafeArea(
-        child: LoginViewBody(),),
+        child: LoginViewBody(),
+      ),
     );
   }
 }

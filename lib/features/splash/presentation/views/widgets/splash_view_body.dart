@@ -25,7 +25,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   }
 
   void goToHome() {
-    Future.delayed(const Duration(seconds: 2), () {
+    Future.delayed(const Duration(milliseconds: 1500), () {
       navigateTo(context, const LoginView());
 
       // Get.to(const HomeView(),
@@ -43,20 +43,32 @@ class _SplashViewBodyState extends State<SplashViewBody>
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kBackgroundSplashColor,
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          const Image(
-            image: AssetImage(AssetsData.logo),
-            height: 200,
-          ),
-          const SizedBox(
-            height: 8,
-          ),
-          SlidingAnimationText(slidingAnimation: slidingAnimation),
-        ],
+      backgroundColor: Colors.transparent,
+      extendBodyBehindAppBar: true,
+      body: Container(
+        decoration: const BoxDecoration(
+            gradient: LinearGradient(
+          colors: [
+            kPrimaryColor,
+            kSecondaryColor,
+          ],
+          begin: Alignment.bottomLeft,
+          end: Alignment.topRight,
+        )),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: [
+            const Image(
+              image: AssetImage(AssetsData.logo),
+              height: 200,
+            ),
+            const SizedBox(
+              height: 8,
+            ),
+            SlidingAnimationText(slidingAnimation: slidingAnimation),
+          ],
+        ),
       ),
     );
   }

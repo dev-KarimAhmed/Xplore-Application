@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:xplore/features/authentication/presentation/views/log_in_view.dart';
 import 'package:xplore/features/splash/presentation/views/splash_view.dart';
 
 void main() {

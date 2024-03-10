@@ -9,7 +9,7 @@ class RegisterView extends StatelessWidget {
   Widget build(BuildContext context) {
     return const SafeArea(
       child: Scaffold(
-        backgroundColor: kBackgroundColor,
+        backgroundColor: Colors.white,
         body: RegisterViewBody(),
       ),
     );
