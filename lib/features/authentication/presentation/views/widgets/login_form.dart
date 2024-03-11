@@ -46,6 +46,7 @@ class LoginViewForm extends StatelessWidget {
           height: 16,
         ),
         CustomButton(
+          width: MediaQuery.of(context).size.width * 0.6,
           onPressed: () {
             navigateTo(context, const HomeView());
             // Navigator.pushReplacement(
@@ -65,7 +66,7 @@ class LoginViewForm extends StatelessWidget {
         ),
         CustomAction(
           textNormal: ' إذا كانت أول مرة لك في استخدام التطبيق',
-          textBtn: 'إنشاء حساب ',
+          textBtn: ' إنشاء حساب ',
           onTap: () {
             navigateTo(context, const RegisterView());
           },

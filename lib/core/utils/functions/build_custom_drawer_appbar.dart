@@ -6,7 +6,7 @@ AppBar customDrawerAppBar({required String title}) {
     return AppBar(
       title: Text(
         title,
-        style: Styles.textGoldStyle,
+        style: Styles.maintTextStyle,
       ),
       centerTitle: true,
       iconTheme: IconThemeData(

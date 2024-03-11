@@ -50,6 +50,7 @@ class RegisterViewForm extends StatelessWidget {
         ),
         CustomButton(
           onPressed: () {},
+          width: MediaQuery.of(context).size.width * 0.6,
           text: 'تسجيل',
         ),
         const SizedBox(
@@ -68,7 +69,7 @@ class RegisterViewForm extends StatelessWidget {
         ),
         CustomAction(
           mainAxisAlignment: MainAxisAlignment.center,
-          textNormal: 'هل لديك حساب؟',
+          textNormal: ' هل لديك حساب؟ ',
           textBtn: 'تسجيل الدخول',
           onTap: () {
             Navigator.pop(context);

@@ -28,7 +28,7 @@ class LoginViewBody extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            Text('الدخول', style: Styles.textStyle28),
+            Text('الدخول', style: Styles.subHeadTextStyle),
             const SizedBox(
               height: 20,
             ),

@@ -20,12 +20,11 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 60,
+      height: 65,
       width: MediaQuery.of(context).size.width * 0.68,
       child: TextFormField(
-        style: const TextStyle(
-          color: kBackgroundSplashColor,
-        ),
+        style:
+            Styles.maintTextStyle.copyWith(color: Colors.black, fontSize: 16),
         validator: (value) {
           if (value == null || value.isEmpty) {
             return 'هذا الحقل مطلوب';
@@ -41,7 +40,7 @@ class CustomTextField extends StatelessWidget {
           hintText: hintText,
           hintTextDirection: TextDirection.rtl,
           fillColor: Colors.white,
-          hintStyle: Styles.hintTextStyle,
+          hintStyle: Styles.maintTextStyle.copyWith(color: Colors.grey),
           filled: true,
           prefixIcon: Icon(
             icon,

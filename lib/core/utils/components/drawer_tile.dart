@@ -20,11 +20,11 @@ class CustomListTile extends StatelessWidget {
       title: Text(
         textDirection: TextDirection.rtl,
         title,
-        style: Styles.textUserName.copyWith(fontSize: 18),
+        style: Styles.maintTextStyle.copyWith(fontSize: 18),
       ),
       trailing: Icon(
         icon,
-        color: kuserName,
+        color: kWhiteColor,
       ),
       onTap: isSameView ? () => Navigator.pop(context) : onTap,
     );

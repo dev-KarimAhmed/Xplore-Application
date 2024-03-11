@@ -28,7 +28,7 @@ class RegisterViewBody extends StatelessWidget {
             const SizedBox(
               height: 30,
             ),
-            Text('التسجيل', style: Styles.textStyle28),
+            Text('التسجيل', style: Styles.subHeadTextStyle),
             const SizedBox(
               height: 20,
             ),

@@ -14,7 +14,7 @@ class CategoriesSection extends StatelessWidget {
       height: 110,
       margin: const EdgeInsets.all(20),
       decoration: BoxDecoration(
-        color: kuserName,
+        color: kWhiteColor,
         borderRadius: BorderRadius.circular(10),
       ),
       child: Row(

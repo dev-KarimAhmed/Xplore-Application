@@ -21,7 +21,7 @@ class userInfo extends StatelessWidget {
         SizedBox(height: 10),
         Text(
           'User Name',
-          style: Styles.textUserName
+          style: Styles.maintTextStyle
               .copyWith(fontWeight: fontWeight, fontSize: fontSize),
         ),
       ],
@@ -40,7 +40,7 @@ class CustomCircleAvatar extends StatelessWidget {
   Widget build(BuildContext context) {
     return CircleAvatar(
       radius: radius ?? 50,
-      backgroundColor: kuserName,
+      backgroundColor: kWhiteColor,
       child: Image.asset(AssetsData.person),
     );
   }

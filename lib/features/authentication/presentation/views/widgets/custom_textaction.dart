@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:xplore/constants.dart';
 import 'package:xplore/core/utils/stlyes.dart';
 import 'package:xplore/features/authentication/presentation/views/widgets/custom_textbtn.dart';
 
@@ -27,8 +28,10 @@ class CustomAction extends StatelessWidget {
           ),
           Text(
             textNormal,
-            style: Styles.hintTextStyle
-                .copyWith(fontSize: 14, fontWeight: FontWeight.w700),
+            style: Styles.maintTextStyle.copyWith(
+                fontSize: 14,
+                fontWeight: FontWeight.w700,
+                color: kPrimaryColor),
             textDirection: TextDirection.rtl,
           ),
         ],

@@ -38,7 +38,7 @@ class WithGoogleBtn extends StatelessWidget {
             ),
             Text(
               data,
-              style: Styles.textStyle16
+              style: Styles.maintTextStyle
                   .copyWith(fontWeight: FontWeight.w200, fontSize: 12),
             )
           ],

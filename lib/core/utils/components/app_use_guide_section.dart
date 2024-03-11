@@ -18,12 +18,12 @@ class AppUseGuidBox extends StatelessWidget {
         color: Color(0xff192D62),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10),
-          side: BorderSide(color: kuserName, width: 1),
+          side: BorderSide(color: kWhiteColor, width: 1),
         ),
         child: Center(
           child: Text(
             'تعلم كيف تستخدم التطبيق',
-            style: Styles.textUserName
+            style: Styles.maintTextStyle
                 .copyWith(color: Colors.white, fontSize: 20),
           ),
         ),

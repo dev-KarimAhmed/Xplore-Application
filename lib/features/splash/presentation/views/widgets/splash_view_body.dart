@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:xplore/constants.dart';
 import 'package:xplore/core/utils/assets.dart';
-import 'package:xplore/core/utils/functions/navigation_functions.dart';
 import 'package:xplore/core/utils/stlyes.dart';
-import 'package:xplore/features/authentication/presentation/views/log_in_view.dart';
+import 'package:xplore/features/start_point/presentation/views/start_point.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({Key? key}) : super(key: key);
@@ -25,8 +24,10 @@ class _SplashViewBodyState extends State<SplashViewBody>
   }
 
   void goToHome() {
-    Future.delayed(const Duration(milliseconds: 1500), () {
-      navigateTo(context, const LoginView());
+    Future.delayed(const Duration(milliseconds: 1700), () {
+      Navigator.pushReplacement(context, MaterialPageRoute(builder: (context) {
+        return StartPointView();
+      }));
 
       // Get.to(const HomeView(),
       //     transition: Transition.fadeIn, duration: kTransitionDuration);
@@ -45,29 +46,32 @@ class _SplashViewBodyState extends State<SplashViewBody>
     return Scaffold(
       backgroundColor: Colors.transparent,
       extendBodyBehindAppBar: true,
-      body: Container(
-        decoration: const BoxDecoration(
-            gradient: LinearGradient(
-          colors: [
-            kPrimaryColor,
-            kSecondaryColor,
-          ],
-          begin: Alignment.bottomLeft,
-          end: Alignment.topRight,
-        )),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          children: [
-            const Image(
-              image: AssetImage(AssetsData.logo),
-              height: 200,
-            ),
-            const SizedBox(
-              height: 8,
-            ),
-            SlidingAnimationText(slidingAnimation: slidingAnimation),
-          ],
+      body: SafeArea(
+        child: Container(
+          height: MediaQuery.of(context).size.height,
+          decoration: const BoxDecoration(
+              gradient: LinearGradient(
+            colors: [
+              kPrimaryColor,
+              kSecondaryColor,
+            ],
+            begin: Alignment.bottomLeft,
+            end: Alignment.topRight,
+          )),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              const Image(
+                image: AssetImage(AssetsData.logo),
+                height: 200,
+              ),
+              const SizedBox(
+                height: 8,
+              ),
+              SlidingAnimationText(slidingAnimation: slidingAnimation),
+            ],
+          ),
         ),
       ),
     );
@@ -103,7 +107,7 @@ class SlidingAnimationText extends StatelessWidget {
           child: Text(
             'A Place Helps You To Learn',
             textAlign: TextAlign.center,
-            style: Styles.textStyle18,
+            style: Styles.maintTextStyle,
           ),
         );
       },

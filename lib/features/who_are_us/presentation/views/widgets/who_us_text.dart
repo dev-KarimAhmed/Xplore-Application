@@ -16,7 +16,7 @@ class WhoUsText extends StatelessWidget {
           textDirection: TextDirection.rtl,
           '''اكسبلور هي شركة متخصصة فى تقديم محتوي  دراسي 
 مرئي لجميع المناهج  التعليمية فى جمهورية مصر العربية''',
-          style: Styles.textUserName.copyWith(height: 2),
+          style: Styles.maintTextStyle.copyWith(height: 2),
         ),
         CustomDivider(),
         Text(
@@ -24,14 +24,14 @@ class WhoUsText extends StatelessWidget {
           '''جميع ما تنتجة الشركة من محاضرات ومحتوي مكتوب 
     واسئلة هي مملوكة للشركة ولا يجوز  استعمالها فى 
     اي اغراض خاصة''',
-          style: Styles.textUserName.copyWith(height: 2),
+          style: Styles.maintTextStyle.copyWith(height: 2),
         ),
         CustomDivider(),
         Text(
           textDirection: TextDirection.rtl,
           '''الدروس من اعداد وتقديم مجموع من المعلمين المتميزين
     فى المواد الى يتم التقديم فيها''',
-          style: Styles.textUserName.copyWith(height: 2),
+          style: Styles.maintTextStyle.copyWith(height: 2),
         ),
         CustomDivider(),
       ],

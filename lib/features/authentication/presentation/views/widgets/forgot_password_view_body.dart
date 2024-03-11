@@ -10,47 +10,49 @@ class ForgotPasswordViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      physics: const BouncingScrollPhysics(),
-      child: SizedBox(
-        width: double.infinity,
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            const SizedBox(
-              height: 30,
-            ),
-            const Image(
-              image: AssetImage(
-                AssetsData.logo,
+    return SafeArea(
+      child: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
+        child: SizedBox(
+          width: double.infinity,
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              const SizedBox(
+                height: 30,
               ),
-              fit: BoxFit.fill,
-              height: 150,
-            ),
-            const SizedBox(
-              height: 30,
-            ),
-            Text('اعادة تعيين كلمة المرور', style: Styles.textStyle28),
-            const SizedBox(
-              height: 30,
-            ),
-            const CustomTextField(
-              keyboardType: TextInputType.emailAddress,
-              hintText: 'البريد الالكتروني',
-              icon: Icons.email,
-            ),
-            const SizedBox(
-              height: 20,
-            ),
-            CustomButton(
-              width: MediaQuery.of(context).size.width * 0.7,
-              onPressed: () {
-                Navigator.pop(context);
-                showToast('تم ارسال البريد الالكتروني بنجاح');
-              },
-              text: 'ارسال البريد لاعادة تعيين كلمة السر',
-            ),
-          ],
+              const Image(
+                image: AssetImage(
+                  AssetsData.logo,
+                ),
+                fit: BoxFit.fill,
+                height: 150,
+              ),
+              const SizedBox(
+                height: 30,
+              ),
+              Text('اعادة تعيين كلمة المرور',
+                  style: Styles.subHeadTextStyle.copyWith(fontSize: 24)),
+              const SizedBox(
+                height: 30,
+              ),
+              const CustomTextField(
+                keyboardType: TextInputType.emailAddress,
+                hintText: 'البريد الالكتروني',
+                icon: Icons.email,
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              CustomButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                  showToast('تم ارسال البريد الالكتروني بنجاح');
+                },
+                text: 'ارسال البريد لاعادة تعيين كلمة السر',
+              ),
+            ],
+          ),
         ),
       ),
     );

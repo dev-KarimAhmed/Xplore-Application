@@ -18,7 +18,7 @@ class CustomCategoryCircle extends StatelessWidget {
         backgroundColor: Color(0xff20428F),
         child: Text(
           title,
-          style: Styles.textGoldStyle.copyWith(fontWeight: FontWeight.w300),
+          style: Styles.maintTextStyle.copyWith(fontWeight: FontWeight.w300),
         ),
       ),
     );
